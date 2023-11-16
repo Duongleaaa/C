@@ -1,26 +1,23 @@
-#include <stdio.h>
-int main()
-{
-    int num,sum=0;
-    printf("Nh?p s? ph?n t? có trong m?ng");
-    scanf("%d", &num);
-    int arr[num];
-    for (int i = 0; i < sizeof(arr) / sizeof(int); i++)
-    {
-        printf("arr[%d]=", i);
-        scanf("%d", &arr[i]);
-    }
-    int findNumber;
-    printf("Nh?p giá tr? c?n t?m trong m?ng ");
-    scanf("%d", &findNumber);
-
-    for (int i = 0; i < sizeof(arr) / sizeof(int); i++)
-    {
-        if (arr[i]==findNumber)
-        {
-            printf("%d\n",i);
-            sum++;
-        }
-    }
-    printf("T?ng các ph?n t? có giá tr? b?ng s? ðc nh?p vào là %d",sum);
-}
+#include<stdio.h>
+int main (){
+	int n,sumFind;
+	printf("moi nhap vao so phan tu trong mang:");
+	scanf("%d",&n);
+	int arr[n];
+	for (int a=0;a<sizeof(arr)/sizeof(int);a++){
+		printf("arr[%d]=",a);
+		scanf("%d",&arr[a]);
+	}
+	int findNumber;
+	printf("moi nhap vao gia tri can tim:");
+	scanf("%d",&findNumber);
+	printf("chi so cac phan tu bang findNumber la:");
+	for ( int a=0;a<sizeof(arr)/sizeof(int);a++){
+		if (findNumber==arr[a]){
+			printf("[%d]\t",a);
+			sumFind=sumFind+arr[a];
+		}
+	} 
+	printf("\n tong cua cac phan tu co gia tri bang findNumber la: %d",sumFind);
+	
+} 

@@ -12,6 +12,6 @@ int main (){
 	for (int i=0;i<n;i++){
 		max=(max<numbers[i])?numbers[i]:max;
 		min=(min>numbers[i])?numbers[i]:min;
-	}printf("%d",max);
+	}printf("%d\n",max);
 	printf("%d",min);
 }
